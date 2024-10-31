@@ -1,0 +1,154 @@
+:root {
+  --color-1: #;
+  --color-2: #;
+  --color-3: #;
+}
+
+/* ------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ancho {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  font-family: Helvetica;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  color: #616161;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ------------------------------------- */
+
+.art-ourteam {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 20px;
+  max-width: 300px;
+}
+
+.art-ourteam h1 {
+  font-size: 44px;
+  line-height: 54px;
+  font-weight: normal;
+  color: black;
+}
+
+.art-ourteam h3 {
+  font-size: 18px;
+  font-weight: normal;
+  color: blue;
+}
+
+/* ------------------------------------- */
+
+/* contenedor carrousel */
+#carousel {
+  /* max-width: 1200px; */
+  display: flex;
+  /* flex-direction: column; */
+  margin: 100px auto;
+  position: relative;
+}
+
+/* contenido carrrousel */
+#slide-container {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 10px;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  /* padding: 20px; */
+  scroll-snap-align: center;
+  position: relative;
+  min-width: 33.3%;
+  text-align: center;
+}
+
+.slide h3 {
+  color: black;
+}
+
+.slide figure {
+  margin-bottom: 20px;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* contenedor botones */
+.slide-buttons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+/* contenedor indicadores */
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.slide-indicator {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px;
+  width: 50px;
+}
+
+.slide-indicator:after {
+  content: "";
+  border: 1px black solid;
+  height: 10px;
+  width: 50px;
+}
+
+.slide-indicator.active:after,
+.slide-indicator:hover:after {
+  background-color: #ccc;
+}
+
+/* flechas */
+.arrow {
+  border: 2px black solid;
+  color: black;
+  background-color: yellow;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
